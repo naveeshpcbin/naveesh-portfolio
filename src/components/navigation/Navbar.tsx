@@ -99,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Desktop Navigation with Active Section Highlighting */}
           {!isAdminPage && (
-            <nav className="hidden md:flex items-center space-x-7" aria-label="Main Navigation">
+            <nav className="hidden lg:flex items-center space-x-7" aria-label="Main Navigation">
               {siteConfig.navigation.map((item) => {
                 const targetId = item.href.replace('#', '');
                 const isActive = activeSection === targetId;
@@ -144,11 +144,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               </a>
             )}
 
-            {/* Mobile Hamburger Button */}
+            {/* Mobile / Tablet Hamburger Button */}
             {!isAdminPage && (
               <button
                 onClick={() => setMobileDrawerOpen(true)}
-                className="md:hidden p-2 text-cream-muted hover:text-cream transition-colors rounded-md focus-visible:outline-2 focus-visible:outline-cream"
+                className="lg:hidden p-2 text-cream-muted hover:text-cream transition-colors rounded-md focus-visible:outline-2 focus-visible:outline-cream"
                 aria-label="Open navigation drawer"
               >
                 <Menu className="w-6 h-6" />
